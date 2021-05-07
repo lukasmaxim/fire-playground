@@ -1,8 +1,22 @@
-query MyQuery {
+query GetPerimsForId {
   fire_perimeter
   (order_by: {perimeter_date: asc}
     where: {fire_id:{_eq: "b08ce436-ff9f-4cf8-aafa-8b2212bc9e82"}}) {
     id
+    centroid
+    acres
+  	perimeter
     perimeter_date
   }
 }
+
+query GetAvgPowConfPerHour {
+  fire_avg_pow_and_conf_per_coord_per_hour(where: {longitude: {_gte: -120.253705876, _lte: -119.628950571}, latitude: {_gte: 37.7485951210001, _lte: 38.095722488}, date_trunc: {_gte: "2013-08-19T10:43:00", _lte: "2013-09-26T09:58:00"}}, order_by: {date_trunc: asc}) {
+    avg_power
+    avg_confidence
+    date_trunc
+    latitude
+    longitude
+  }
+}
+
