@@ -1,11 +1,10 @@
 <template>
     <div id="app">
-        <!-- <PerimeterTimeline
+        <PerimeterTimeline
             :perimeterSample="this.perimMeshes"
             :globalScale="this.globalScale"
-        /> -->
-        <HexMap
         />
+        <!-- <HexMap/> -->
         <!-- <HeatmapFromShader
             :perimeterSample="this.perimMeshes"
             :globalScale="this.globalScale"
@@ -50,8 +49,8 @@ import Perimeter from "./perimeter.js";
 export default {
     name: "App",
     components: {
-        HexMap,
-        // PerimeterTimeline,
+        //HexMap,
+        PerimeterTimeline,
         // HeatmapFromShader,
         // HeatmapFromHeatmapjs,
         // Delaunay,
@@ -219,7 +218,7 @@ export default {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
+    /* color: #2c3e50; */
     margin-top: 60px;
 }
 </style>

@@ -133,7 +133,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .canvas {
     background-color: grey;
     width: 500px;
